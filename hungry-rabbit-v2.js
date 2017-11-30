@@ -274,7 +274,7 @@ describe("#maxValuePath", function() {
   });
 });
 
-// DOM
+// User interaction
 let timeout;
 const textAreaNode = document.getElementsByTagName('textarea')[0];
 const answerNode = document.getElementById('answer');
@@ -283,7 +283,7 @@ const spanNode2 = document.getElementById('span2');
 
 textAreaNode.addEventListener('keydown', function(event) {
   // remove line breaks and spaces from text input
-  const value = event.target.value.replace(/\r?\n|\r /g, '');
+  const value = event.target.value.replace(/[\r?\n|\r ]/g, '');
 
   if (!charsOk(value)) {
     spanNode2.textContent = 'Whoops it looks like you might have some non integers in there';

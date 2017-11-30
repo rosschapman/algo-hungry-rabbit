@@ -3,27 +3,54 @@
     font-family: open sans;
   }
 </style>
-<h1>Hungry Rabbit</h1>
+<h1 style="margin-bottom: 0;">Hungry Bunny</h1>
+<h2 style="margin: 0 auto;">by <a href="http://www.ross.wtf">internetross</a></h2>
 
 <div  style="width: 50%">
+  <p>Welcome! I built this demo as part of a learning exercise where I blogged about a difficult time I had with a timed coding challenge, only to have a much easier time completing later when I wasn't under the gun.</p>
+
+  <h2>The problem:</h2>
   <p>Create a 2D matrix below by adding rows of arrays--integers only!--to mimic a garden where each array element is a plot of carrots. Behind the scenes we're going to calculate how many carrots a rabbit can eat if he starts at the center of the garden and eats his way out.</p> 
 
   <p><b>Rules</b>: On a given turn, the rabbit will eat the carrots available on the plot that it is on, and then move up, down, left, or right, choosing the the plot that has the most carrots. If there are no carrots left on any of the adjacent plot, the rabbit will go to sleep.</p> 
 
   <p><b>Note</b>: Answer might be buggy if the rabbit has to choose between two plots with the same number of carrots.</p>
-</div>
 
-<textarea 
+  <p>
+    Example: 
+    <pre>
+[
+ [5, 7, 8, 6, 3],
+ [0, 0, 7, 0, 4],
+ [4, 6, 3, 4, 9],
+ [3, 1, 0, 5, 8]
+]
+    </pre>
+    Should return 27.
+  </p>
+</div>
+<hr style="width: 50%; float: left;">
+<h2 style="clear: left;">INTERACTIVE SOLUTION:</h2>
+<small style="display: block; margin-bottom: 5px; ">Note: only add the nested arrays</small>
+[ <textarea 
   style="border: 2px solid brown; font-size: 15px; outline: none;"
   name="textarea"  
   cols="30" 
   rows="5" 
-  placeholder="[5, 7, 8, 6, 3],&#10;[0, 0, 7, 0, 4],&#10;[4, 6, 3, 4, 9],&#10;[3, 1, 0, 5, 8]"></textarea>
+  placeholder="[5, 7, 8, 6, 3]..."></textarea> ]
 <div style="color: gray; font-size:.9em">
   <div id="span1"></div>
   <div id="span2"></div>
 </div>
 
-<h2>The hungry rabbit ate <span id="answer" style="border-bottom: 1px solid; font-weight: bold; width: 30px; display: inline-block; min-height: 1px;"></span> carrots!</h2>
+<h3>The hungry rabbit ate <span id="answer" style="border-bottom: 1px solid; font-weight: bold; width: 30px; display: inline-block; min-height: 1px;"></span> carrots!</h3>
 
 <div style="border: 1px solid gray; border-width: 5px; width: 100%; position: relative; margin: 20px -8px 0"></div>
+
+<link rel="shortcut icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine-html.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/boot.js"></script>
+<script type="text/javascript" src="./hungry-rabbit-v2.js"></script>
