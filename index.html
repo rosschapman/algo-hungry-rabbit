@@ -1,0 +1,29 @@
+<style>
+  body {
+    font-family: open sans;
+  }
+</style>
+<h1>Hungry Rabbit</h1>
+
+<div  style="width: 50%">
+  <p>Create a 2D matrix below by adding rows of arrays--integers only!--to mimic a garden where each array element is a plot of carrots. Behind the scenes we're going to calculate how many carrots a rabbit can eat if he starts at the center of the garden and eats his way out.</p> 
+
+  <p><b>Rules</b>: On a given turn, the rabbit will eat the carrots available on the plot that it is on, and then move up, down, left, or right, choosing the the plot that has the most carrots. If there are no carrots left on any of the adjacent plot, the rabbit will go to sleep.</p> 
+
+  <p><b>Note</b>: Answer might be buggy if the rabbit has to choose between two plots with the same number of carrots.</p>
+</div>
+
+<textarea 
+  style="border: 2px solid brown; font-size: 15px; outline: none;"
+  name="textarea"  
+  cols="30" 
+  rows="5" 
+  placeholder="[5, 7, 8, 6, 3],&#10;[0, 0, 7, 0, 4],&#10;[4, 6, 3, 4, 9],&#10;[3, 1, 0, 5, 8]"></textarea>
+<div style="color: gray; font-size:.9em">
+  <div id="span1"></div>
+  <div id="span2"></div>
+</div>
+
+<h2>The hungry rabbit ate <span id="answer" style="border-bottom: 1px solid; font-weight: bold; width: 30px; display: inline-block; min-height: 1px;"></span> carrots!</h2>
+
+<div style="border: 1px solid gray; border-width: 5px; width: 100%; position: relative; margin: 20px -8px 0"></div>
